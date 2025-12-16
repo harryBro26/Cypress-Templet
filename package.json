@@ -1,6 +1,6 @@
 {
   "name": "@rajibdhl/cypress-template",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Cypress automation starter template",
   "bin": {
     "create-cypress-template": "./bin/create.js"
