@@ -1,6 +1,6 @@
 {
-  "name": "@rajibdhl/cypress-template",
-  "version": "4.0.0",
+  "name": "cypress-automation-starter",
+  "version": "1.0.0",
   "description": "Reusable Cypress automation framework",
   "private": false,
   "files": [
@@ -24,5 +24,8 @@
   },
   "dependencies": {
     "dotenv": "^17.2.3"
+  },
+  "overrides": {
+    "systeminformation": "5.27.14"
   }
 }

@@ -28,6 +28,13 @@ async function createProject() {
         // 4. Copy the entire 'template' directory content to the destination
         await fs.copy(sourcePath, finalDest, { overwrite: true });
 
+        // 5. Update package.json with project name
+        const pkgPath = path.join(finalDest, 'package.json');
+        const pkg = await fs.readJson(pkgPath);
+        pkg.name = projectName || path.basename(finalDest);
+        pkg.version = '1.0.0';
+        await fs.writeJson(pkgPath, pkg, { spaces: 2 });
+
         console.log(`\n✨ Cypress template successfully initialized!`);
         console.log(`\nTo get started, run the following commands:`);
         
